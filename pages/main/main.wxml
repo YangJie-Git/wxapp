@@ -1,0 +1,93 @@
+<!--tab_top-->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'active' : ''}}" data-current="0" bindtap="swichNav">
+    <view class="swiper-tab-img">
+      <!-- <image class="img" src="{{currentTab==0 ? iconlists[0].focus: iconlists[0].normal}}"></image> -->
+    </view>
+    <view>frag01</view>
+  </view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'active' : ''}}" data-current="1" bindtap="swichNav">
+    <view class="swiper-tab-img">
+      <!-- <image class="img" src="{{currentTab==1 ? iconlists[1].focus: iconlists[1].normal}}"></image> -->
+    </view>
+    <view>frag02</view>
+  </view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'active' : ''}}" data-current="2" bindtap="swichNav">
+    <view class="swiper-tab-img">
+      <!-- <image class="img" src="{{currentTab==2 ? iconlists[2].focus: iconlists[2].normal}}"></image> -->
+    </view>
+    <view>frag03</view>
+  </view>
+  <view class="swiper-tab-list {{currentTab==3 ? 'active' : ''}}" data-current="3" bindtap="swichNav">
+    <view class="swiper-tab-img">
+      <!-- <image class="img" src="{{currentTab==3 ? iconlists[3].focus: iconlists[3].normal}}"></image> -->
+    </view>
+    <view>frag04</view>
+  </view>
+</view>
+
+
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 51}}px" bindchange="bindChange">
+
+  <!-- frag01 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+
+      <!-- 列表 -->
+      <view class="themes-list">
+        <view class="themes-list-box" wx:for="{{datalists}}" wx:key="datalists1_{{index}}">
+          <view class="themes-list-main">
+            <view class="themes-list-name">{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <!-- grag02 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+
+      <!-- 列表 -->
+      <view class="themes-list">
+        <view class="themes-list-box" wx:for="{{reslists}}" wx:key="reslists1_{{index}}">
+          <view class="themes-list-main">
+            <view class="themes-list-name">{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <!-- grag03 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+
+      <!-- 列表 -->
+      <view class="themes-list">
+        <view class="themes-list-box" wx:for="{{datalists}}" wx:key="datalists2_{{index}}">
+          <view class="themes-list-main">
+            <view class="themes-list-name">{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <!-- grag02 -->
+  <swiper-item>
+    <scroll-view class="hot-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+
+      <!-- 列表 -->
+      <view class="themes-list">
+        <view class="themes-list-box" wx:for="{{reslists}}" wx:key="reslists2_{{index}}">
+          <view class="themes-list-main">
+            <view class="themes-list-name">{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+

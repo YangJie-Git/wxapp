@@ -1,0 +1,83 @@
+<!--index.wxml-->
+
+<!-- 分类tab -->
+<scroll-view scroll-x="true" class="tab_bar">
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item.name}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+      <!-- <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view> -->
+    </view>
+  </view>
+  <!--
+  <view class="tab_item {{index==activeIndex?'active':''}}" style="width:{{itemWidth}};" 
+      wx:for="{{tabs}}" wx:key="tab_item{{index}}" bindtap="tabChange" data-index="{{index}}">
+    <view class="{{!(index==0 || index-1==activeIndex || index==activeIndex)?'tab_item_border':''}}">
+      {{item.name}} {{index+1}}
+    </view>
+  </view>
+  -->
+</scroll-view>
+
+<!-- 首页 -->
+<block wx:if="{{'home'==activeType}}">
+  <view class="tab_page_home">
+    <!-- banner * 3 -->
+    <view class='container'>
+      <image class='item first' style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}" bindtap="testClick"></image>
+    </view>
+    <!-- 视频系列推荐 -->
+    <view>
+    </view>
+    <!-- 视频列表 -->
+    <view>
+    </view>
+    tab_page_home
+  </view>
+</block>
+
+<!-- 更多页 去下载 -->
+<block wx:elif="{{'goapp'==activeType}}">
+  <view class="tab_page_more">
+    <view>
+      <view>更多更好的视频音乐？</view>
+      <view>----------------</view>
+      <view>请移步 儿歌点点APP</view>
+    </view>
+  </view>
+</block>
+
+<!-- 其他列表页 -->
+<block wx:else>
+  <view class="tab_page_other">
+    tab_page_other
+  </view>
+</block>
+
+
+
+
+
+<!--
+<NavBar></NavBar>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称1 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+-->

@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/logs/logs"
+
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "儿歌点点",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "backgroundColor": "#f8f8f8",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "宝宝看",
+        "iconPath": "images/icon_classify.png",
+        "selectedIconPath": "images/icon_classify_select.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "宝宝听",
+        "iconPath": "images/icon_classify.png",
+        "selectedIconPath": "images/icon_classify_select.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "历史",
+        "iconPath": "images/icon_classify.png",
+        "selectedIconPath": "images/icon_classify_select.png"
+      }
+    ],
+    "color": "#c6c6c6",
+    "selectedColor": "green",
+    "backgroundColor": "#f7f7fa",
+    "borderStyle": "white",
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

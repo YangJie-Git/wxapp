@@ -1,0 +1,65 @@
+/**index.wxss**/
+.tab_bar{
+  height: 60rpx;
+}
+.weui-navbar{
+  border-bottom: 1rpx solid #ababab;
+}
+.weui-navbar__item{
+  padding:8rpx 0;
+  width: 100rpx;
+    /* -webkit-box-flex:inherit; */
+  /* -webkit-flex: inherit; */
+          /* flex: inherit; */
+}
+.weui-navbar__slider{
+  width: 100rpx;
+}
+
+.weui-navbar__title{
+  font-size:26rpx;
+}
+
+
+.tab_page_home {
+  padding: 30rpx;
+}
+
+.tab_page_other {
+  padding: 30rpx;
+}
+
+.tab_page_more {
+  margin: 220rpx 20rpx 20rpx 0;
+  border-left: 10rpx solid #ccc;
+  font-size: 26rpx;
+}
+
+.tab_page_more>view {
+  padding: 30rpx;
+  background: #ececec;
+  border-radius: 0 20rpx 20rpx 0;
+}
+
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
