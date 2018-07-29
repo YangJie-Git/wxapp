@@ -1,25 +1,39 @@
 /**index.wxss**/
-.tab_bar{
+@import "../../common/tpls/banner3/banner3.wxss";
+@import "../../common/tpls/list/list.wxss";
+
+navigator {
+  display: initial;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tab_bar {
   height: 60rpx;
 }
-.weui-navbar{
+
+.weui-navbar {
   border-bottom: 1rpx solid #ababab;
 }
-.weui-navbar__item{
-  padding:8rpx 0;
-  width: 100rpx;
-    /* -webkit-box-flex:inherit; */
-  /* -webkit-flex: inherit; */
-          /* flex: inherit; */
+
+.weui-navbar__item {
+  padding: 8rpx 0;
+  /* width: 100rpx; *//* -webkit-box-flex:inherit;
+  -webkit-flex: inherit;
+          flex: inherit; */
 }
-.weui-navbar__slider{
+
+.weui-navbar__slider {
   width: 100rpx;
 }
 
-.weui-navbar__title{
-  font-size:26rpx;
+.weui-navbar__title {
+  font-size: 26rpx;
 }
-
 
 .tab_page_home {
   padding: 30rpx;
@@ -41,25 +55,43 @@
   border-radius: 0 20rpx 20rpx 0;
 }
 
+/* swiper */
 
-
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.swiper-box {
+  display: block;
+  height: 500rpx;
+  width: 100%;
+  overflow: hidden;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.scroll-box {
+  display: block;
+  height: 100%;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.recommended {
+  padding-top: 5rpx;
+  padding-bottom: 10rpx;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around; /* Safari */
+  justify-content: space-around;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.usermotto {
-  margin-top: 200px;
+.recommended>view {
+  width: 25%;
+  height: auto;
+  text-align: center;
+}
+
+.recommended>view>image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.recommended>view>view {
+  width: 100%;
+  height: auto;
+  font-size: 24rpx;
+  /* text-align: center; */
 }

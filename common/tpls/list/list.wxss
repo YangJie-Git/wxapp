@@ -1,0 +1,42 @@
+/* common/tpls/list/list.wxss */
+.list {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 30rpx;
+  /* background: greenyellow; */
+}
+
+.list>view {
+  padding: 2%;
+  width: 98%;
+  height: 100rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.list>view>image {
+  flex: 0 0 200rpx;
+  width: 200rpx;
+  height: 100%;
+}
+
+.list>view>view:nth-child(2) {
+  flex: auto;
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.list>view>view:nth-child(3) {
+  flex: 0 0 80rpx;
+  display: flex;
+  /* vertical-align: middle; */
+  padding-left: 20rpx;
+  align-items: center;
+}
+
+.list>view>view:nth-child(3)>image {
+  width: 40rpx;
+  height: 40rpx;
+}

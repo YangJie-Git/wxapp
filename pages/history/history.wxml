@@ -1,0 +1,4 @@
+<!--pages/history/history.wxml-->
+<import src="../../common/tpls/list/list.wxml" />
+<!-- 视频列表 -->
+<template is="List" data="{{lists, ...{listName:'历史'} }}" />

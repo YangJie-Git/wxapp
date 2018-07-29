@@ -1,0 +1,2 @@
+/* pages/history/history.wxss */
+@import "../../common/tpls/list/list.wxss";

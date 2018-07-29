@@ -1,67 +1,119 @@
 <!--index.wxml-->
+<import src="../../common/tpls/banner3/banner3.wxml" />
+<import src="../../common/tpls/list/list.wxml" />
+<view class='page'>
+  <!-- 分类tab -->
+  <scroll-view scroll-x="true" class="tab_bar">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item.name}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+      </view>
+    </view>
+  </scroll-view>
 
-<!-- 分类tab -->
-<scroll-view scroll-x="true" class="tab_bar">
-  <view class="weui-tab">
-    <view class="weui-navbar">
-      <block wx:for-items="{{tabs}}" wx:key="{{index}}">
-        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
-          <view class="weui-navbar__title">{{item.name}}</view>
+
+  <swiper current="{{activeIndex}}" class="swiper-box" duration="300" style="height:{{winHeight - 51}}px" bindchange="swiperChange">
+
+    <!-- swiper 精选 -->
+    <swiper-item>
+      <scroll-view class="scroll-box home_scroll" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+        <!-- tpl banner-->
+        <template is="Banner3" data="{{banner3}}" />
+        <!-- 视频系列推荐 -->
+        <view class='recommended weui-flex'>
+          <block wx:for-items="{{recommendeds}}" wx:key="{{index}}">
+            <view id="{{index}}" hover-class="navigator-hover">
+              <image mode="scaleToFill" src="../../images/icon_classify.png{{item.src}}"></image>
+              <view>{{item.name}}{{item.id}}</view>
+            </view>
+          </block>
         </view>
-      </block>
-      <view class="weui-navbar__slider" style="transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
-    </view>
-    <view class="weui-tab__panel">
-      <!-- <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
-      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
-      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view> -->
-    </view>
-  </view>
-  <!--
-  <view class="tab_item {{index==activeIndex?'active':''}}" style="width:{{itemWidth}};" 
-      wx:for="{{tabs}}" wx:key="tab_item{{index}}" bindtap="tabChange" data-index="{{index}}">
-    <view class="{{!(index==0 || index-1==activeIndex || index==activeIndex)?'tab_item_border':''}}">
-      {{item.name}} {{index+1}}
-    </view>
-  </view>
-  -->
-</scroll-view>
+        <!-- 视频列表 -->
+        <template is="List" data="{{lists, ...{listName:'精选'} }}" />
+      </scroll-view>
+    </swiper-item>
 
-<!-- 首页 -->
-<block wx:if="{{'home'==activeType}}">
-  <view class="tab_page_home">
-    <!-- banner * 3 -->
-    <view class='container'>
-      <image class='item first' style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{src}}" bindtap="testClick"></image>
-    </view>
-    <!-- 视频系列推荐 -->
-    <view>
-    </view>
-    <!-- 视频列表 -->
-    <view>
-    </view>
-    tab_page_home
-  </view>
-</block>
+    <!-- 动画 -->
+    <swiper-item>
+      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+        <!-- 视频列表 -->
+        <template is="List" data="{{lists, ...{listName:'动画'} }}" />
+      </scroll-view>
+    </swiper-item>
 
-<!-- 更多页 去下载 -->
-<block wx:elif="{{'goapp'==activeType}}">
-  <view class="tab_page_more">
-    <view>
-      <view>更多更好的视频音乐？</view>
-      <view>----------------</view>
-      <view>请移步 儿歌点点APP</view>
+    <!-- 儿歌 -->
+    <swiper-item>
+      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+        <!-- 视频列表 -->
+        <template is="List" data="{{lists, ...{listName:'儿歌'} }}" />
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 故事 -->
+    <swiper-item>
+      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+        <!-- 视频列表 -->
+        <template is="List" data="{{lists, ...{listName:'故事'} }}" />
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 早教 -->
+    <swiper-item>
+      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+        <!-- 视频列表 -->
+        <template is="List" data="{{lists, ...{listName:'早教'} }}" />
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 英文 -->
+    <swiper-item>
+      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+        <!-- 视频列表 -->
+        <template is="List" data="{{lists, ...{listName:'英文'} }}" />
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 更多 -->
+    <swiper-item>
+      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+        <view class="tab_page_more">
+          <view>
+            <view>更多更好的视频音乐？</view>
+            <view>----------------</view>
+            <view>请移步 儿歌点点APP</view>
+          </view>
+        </view>
+        <button class="weui-btn" type="primary" style='margin-top:100rpx;width:80%'>下载APP 获取更多内容</button>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 首页 -->
+  <!-- <block wx:if="{{'home'==activeType}}">
+    <view class="tab_page_home">
+
     </view>
-  </view>
-</block>
+  </block> -->
 
-<!-- 其他列表页 -->
-<block wx:else>
-  <view class="tab_page_other">
-    tab_page_other
-  </view>
-</block>
+  <!-- 更多页 去下载 -->
+  <!-- <block wx:elif="{{'goapp'==activeType}}">
 
+  </block> -->
+
+  <!-- 其他列表页 -->
+  <!-- <block wx:else>
+    <view class="tab_page_other">
+      tab_page_other
+    </view>
+  </block> -->
+</view>
 
 
 

@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/main/main",
-    "pages/logs/logs"
-
+    "pages/logs/logs",
+    "pages/history/history"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -28,7 +28,7 @@
         "selectedIconPath": "images/icon_classify_select.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/history/history",
         "text": "历史",
         "iconPath": "images/icon_classify.png",
         "selectedIconPath": "images/icon_classify_select.png"

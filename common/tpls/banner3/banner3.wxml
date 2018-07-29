@@ -1,0 +1,18 @@
+<template name="Banner3">
+  <!-- banner * 3 -->
+  <view class='banner3 weui-flex'>
+    <view class='weui-flex__item'>
+      <navigator id="{{banner3[0].goid}}" url="{{banner3[0].url}}" bindtap="bannerClick">
+        <image mode="scaleToFill" src="{{banner3[0].src}}"></image>
+      </navigator>
+    </view>
+    <view class='weui-flex__item weui-flex'>
+      <navigator  id="{{banner3[1].goid}}" url="{{banner3[1].url}}"  bindtap="bannerClick">
+        <image class='weui-flex__item' mode="scaleToFill" src="{{banner3[1].src}}"></image>
+      </navigator>
+      <navigator  id="{{banner3[2].goid}}" url="{{banner3[2].url}}"  bindtap="bannerClick">
+        <image class='weui-flex__item' mode="scaleToFill" src="{{banner3[2].src}}"></image>
+      </navigator>
+    </view>
+  </view>
+</template>
