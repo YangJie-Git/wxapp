@@ -1,9 +1,10 @@
 {
   "pages": [
+        "pages/audio/audio",
     "pages/index/index",
-    "pages/main/main",
     "pages/logs/logs",
     "pages/history/history"
+
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -22,7 +23,7 @@
         "selectedIconPath": "images/icon_classify_select.png"
       },
       {
-        "pagePath": "pages/main/main",
+        "pagePath": "pages/audio/audio",
         "text": "宝宝听",
         "iconPath": "images/icon_classify.png",
         "selectedIconPath": "images/icon_classify_select.png"

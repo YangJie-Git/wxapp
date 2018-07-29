@@ -1,0 +1,109 @@
+/**index.wxss**/
+@import "../../common/tpls/banner3/banner3.wxss";
+@import "../../common/tpls/list/list.wxss";
+
+navigator {
+  display: initial;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.home_scroll .page__hd{
+  padding: 20rpx 40rpx 20rpx 40rpx;
+}
+.home_scroll .page__hd .page__title{
+  text-align: center;
+  font-size: 30rpx
+}
+.home_scroll .page__hd .page__desc{
+  /* margin-top: 0; */
+  text-align: center;
+  font-size: 24rpx;
+}
+.tab_bar {
+  height: 60rpx;
+}
+
+.weui-navbar {
+  border-bottom: 1rpx solid #ababab;
+}
+
+.weui-navbar__item {
+  padding: 8rpx 0;
+  /* width: 100rpx; *//* -webkit-box-flex:inherit;
+  -webkit-flex: inherit;
+          flex: inherit; */
+}
+
+.weui-navbar__slider {
+  width: 100rpx;
+}
+
+.weui-navbar__title {
+  font-size: 26rpx;
+}
+
+.tab_page_home {
+  padding: 30rpx;
+}
+
+.tab_page_other {
+  padding: 30rpx;
+}
+
+.tab_page_more {
+  margin: 220rpx 20rpx 20rpx 0;
+  border-left: 10rpx solid #ccc;
+  font-size: 26rpx;
+}
+
+.tab_page_more>view {
+  padding: 30rpx;
+  background: #ececec;
+  border-radius: 0 20rpx 20rpx 0;
+}
+
+/* swiper */
+
+.swiper-box {
+  display: block;
+  height: 500rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+.scroll-box {
+  display: block;
+  height: 100%;
+}
+
+.recommended {
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around; /* Safari */
+  justify-content: space-around;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.recommended>view {
+  width: 33.3333%;
+  height: auto;
+  text-align: center;
+}
+
+.recommended>view>image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.recommended>view>view {
+  width: 100%;
+  height: auto;
+  font-size: 24rpx;
+  /* text-align: center; */
+}

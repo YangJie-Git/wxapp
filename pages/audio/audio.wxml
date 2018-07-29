@@ -26,6 +26,12 @@
       <scroll-view class="scroll-box home_scroll" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
         <!-- tpl banner-->
         <template is="Banner3" data="{{banner3}}" />
+
+        <view class="page__hd">
+          <view class="page__title">精选专辑</view>
+          <view class="page__desc">宝宝最爱  ●  热门儿歌  ●  精彩故事</view>
+        </view>
+
         <!-- 视频系列推荐 -->
         <view class='recommended weui-flex'>
           <block wx:for-items="{{recommendeds}}" wx:key="{{index}}">
@@ -37,14 +43,6 @@
         </view>
         <!-- 视频列表 -->
         <template is="List" data="{{lists, ...{listName:'精选'} }}" />
-      </scroll-view>
-    </swiper-item>
-
-    <!-- 动画 -->
-    <swiper-item>
-      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
-        <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'动画'} }}" />
       </scroll-view>
     </swiper-item>
 
@@ -64,19 +62,27 @@
       </scroll-view>
     </swiper-item>
 
-    <!-- 早教 -->
-    <swiper-item>
-      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
-        <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'早教'} }}" />
-      </scroll-view>
-    </swiper-item>
-
     <!-- 英文 -->
     <swiper-item>
       <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
         <!-- 视频列表 -->
         <template is="List" data="{{lists, ...{listName:'英文'} }}" />
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 国学 -->
+    <swiper-item>
+      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+        <!-- 视频列表 -->
+        <template is="List" data="{{lists, ...{listName:'国学'} }}" />
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 纯音乐 -->
+    <swiper-item>
+      <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
+        <!-- 视频列表 -->
+        <template is="List" data="{{lists, ...{listName:'纯音乐'} }}" />
       </scroll-view>
     </swiper-item>
 
