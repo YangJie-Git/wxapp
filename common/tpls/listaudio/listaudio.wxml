@@ -1,10 +1,19 @@
-<!--common/tpls/list/list.wxml-->
-<template name="List">
-  <view class='list weui-flex'>
+<template name="ListAudio">
+  <view class='listaudio weui-flex'>
     <block wx:for-items="{{lists}}" wx:key="{{index}}">
       <view id="{{index}}" class='weui-flex' hover-class="navigator-hover">
         <image class="weui-flex__item" mode="scaleToFill" src="../../images/def.jpg"></image>
-        <view class='weui-flex__item'>{{listName}}{{item.name}}{{item.id}}</view>
+        <view class='weui-flex__item'>
+          <view>
+            {{listName}}{{item.name}}{{item.id}}
+          </view>
+          <view>
+            {{item.des}}
+          </view>
+          <view>
+            共{{item.num}}首
+          </view>
+        </view>
         <view id="{{index}}" class='weui-flex__item' catchtap='shareClick'>
           <image mode="scaleToFill" src="../../images/right.png"></image>
         </view>

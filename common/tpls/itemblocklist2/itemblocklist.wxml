@@ -1,0 +1,10 @@
+<template name="ItemBlockList2">
+        <view class='recommended weui-flex'>
+          <block wx:for-items="{{recommendeds}}" wx:key="{{index}}">
+            <view id="{{index}}" hover-class="navigator-hover">
+              <image mode="scaleToFill" src="../../images/icon_classify.png{{item.src}}"></image>
+              <view>{{item.name}}</view>
+            </view>
+          </block>
+        </view>
+</template>

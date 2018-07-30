@@ -1,4 +1,5 @@
 /* common/tpls/list/list.wxss */
+
 .list {
   width: 100%;
   height: auto;
@@ -13,6 +14,11 @@
   width: 98%;
   height: 100rpx;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.list>image {
+  width: 100%;
+  height: 200rpx;
 }
 
 .list>view>image {

@@ -1,6 +1,7 @@
 <!--index.wxml-->
 <import src="../../common/tpls/banner3/banner3.wxml" />
-<import src="../../common/tpls/list/list.wxml" />
+<import src="../../common/tpls/listaudio/listaudio.wxml" />
+<import src="../../common/tpls/itemblocklist/itemblocklist.wxml" />
 <view class='page'>
   <!-- 分类tab -->
   <scroll-view scroll-x="true" class="tab_bar">
@@ -27,22 +28,37 @@
         <!-- tpl banner-->
         <template is="Banner3" data="{{banner3}}" />
 
+        <!-- 专辑列表 精选 -->
         <view class="page__hd">
           <view class="page__title">精选专辑</view>
-          <view class="page__desc">宝宝最爱  ●  热门儿歌  ●  精彩故事</view>
+          <!-- <view class="page__desc">宝宝最爱  ●  热门儿歌  ●  精彩故事</view> -->
         </view>
-
-        <!-- 视频系列推荐 -->
-        <view class='recommended weui-flex'>
-          <block wx:for-items="{{recommendeds}}" wx:key="{{index}}">
-            <view id="{{index}}" hover-class="navigator-hover">
-              <image mode="scaleToFill" src="../../images/icon_classify.png{{item.src}}"></image>
-              <view>{{item.name}}</view>
-            </view>
-          </block>
+        <template is="ItemBlockList" data="{{recommendeds}}" />
+        <!-- 专辑列表 -->
+        <view class="page__hd weui-flex">
+          <view class="page__title weui-flex__item">儿歌</view>
+          <view class="page__desc weui-flex__item" hover-class="navigator-hover">更多...</view>
         </view>
-        <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'精选'} }}" />
+        <template is="ItemBlockList" data="{{recommendeds}}" />
+        <!-- 专辑列表 -->
+        <view class="page__hd weui-flex">
+          <view class="page__title weui-flex__item">儿歌</view>
+          <view class="page__desc weui-flex__item" hover-class="navigator-hover">更多...</view>
+        </view>
+        <template is="ItemBlockList" data="{{recommendeds}}" />
+        <!-- 专辑列表 -->
+        <view class="page__hd weui-flex">
+          <view class="page__title weui-flex__item">儿歌</view>
+          <view class="page__desc weui-flex__item" hover-class="navigator-hover">更多...</view>
+        </view>
+        <template is="ItemBlockList" data="{{recommendeds}}" />
+        <!-- 专辑列表 -->
+        <view class="page__hd weui-flex">
+          <view class="page__title weui-flex__item">儿歌</view>
+          <view class="page__desc weui-flex__item" hover-class="navigator-hover">更多...</view>
+        </view>
+        <template is="ItemBlockList" data="{{recommendeds}}" />
+        <!-- <template is="List" data="{{lists, ...{listName:'精选'} }}" /> -->
       </scroll-view>
     </swiper-item>
 
@@ -50,7 +66,7 @@
     <swiper-item>
       <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
         <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'儿歌'} }}" />
+        <template is="ListAudio" data="{{lists, ...{listName:'儿歌'} }}" />
       </scroll-view>
     </swiper-item>
 
@@ -58,7 +74,7 @@
     <swiper-item>
       <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
         <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'故事'} }}" />
+        <template is="ListAudio" data="{{lists, ...{listName:'故事'} }}" />
       </scroll-view>
     </swiper-item>
 
@@ -66,7 +82,7 @@
     <swiper-item>
       <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
         <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'英文'} }}" />
+        <template is="ListAudio" data="{{lists, ...{listName:'英文'} }}" />
       </scroll-view>
     </swiper-item>
 
@@ -74,7 +90,7 @@
     <swiper-item>
       <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
         <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'国学'} }}" />
+        <template is="ListAudio" data="{{lists, ...{listName:'国学'} }}" />
       </scroll-view>
     </swiper-item>
 
@@ -82,7 +98,7 @@
     <swiper-item>
       <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
         <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'纯音乐'} }}" />
+        <template is="ListAudio" data="{{lists, ...{listName:'纯音乐'} }}" />
       </scroll-view>
     </swiper-item>
 

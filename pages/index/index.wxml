@@ -1,6 +1,8 @@
 <!--index.wxml-->
 <import src="../../common/tpls/banner3/banner3.wxml" />
 <import src="../../common/tpls/list/list.wxml" />
+<import src="../../common/tpls/itemblocklist2/itemblocklist.wxml" />
+<import src="../../common/tpls/listpartner/listpartner.wxml" />
 <view class='page'>
   <!-- 分类tab -->
   <scroll-view scroll-x="true" class="tab_bar">
@@ -27,16 +29,9 @@
         <!-- tpl banner-->
         <template is="Banner3" data="{{banner3}}" />
         <!-- 视频系列推荐 -->
-        <view class='recommended weui-flex'>
-          <block wx:for-items="{{recommendeds}}" wx:key="{{index}}">
-            <view id="{{index}}" hover-class="navigator-hover">
-              <image mode="scaleToFill" src="../../images/icon_classify.png{{item.src}}"></image>
-              <view>{{item.name}}</view>
-            </view>
-          </block>
-        </view>
+        <template is="ItemBlockList2" data="{{recommendeds}}" />
         <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'精选'} }}" />
+        <template is="List" data="{{lists, ...{listName:'精选',listBannerNum:'3'} }}" />
       </scroll-view>
     </swiper-item>
 
@@ -72,11 +67,10 @@
       </scroll-view>
     </swiper-item>
 
-    <!-- 英文 -->
+    <!-- 伙伴 -->
     <swiper-item>
       <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100" bindscrolltolower="scrolltolower">
-        <!-- 视频列表 -->
-        <template is="List" data="{{lists, ...{listName:'英文'} }}" />
+        <template is="ListPartner" data="{{recommendeds}}" />
       </scroll-view>
     </swiper-item>
 

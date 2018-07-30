@@ -1,0 +1,25 @@
+.recommended {
+  padding-top: 5rpx;
+  padding-bottom: 10rpx;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.recommended>view {
+  width: 25%;
+  height: auto;
+  text-align: center;
+}
+
+.recommended>view>image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.recommended>view>view {
+  width: 100%;
+  height: auto;
+  font-size: 24rpx;
+}

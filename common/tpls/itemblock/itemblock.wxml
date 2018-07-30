@@ -1,0 +1,11 @@
+<template name="ItemBlock">
+    <block wx:for-items="{{recommendeds}}" wx:key="{{index}}">
+      <view>
+        <view id="{{index}}" hover-class="navigator-hover">
+          <span wx:if="{{item.num}}">共{{item.num}}首</span>
+          <image mode="scaleToFill" src="../../images/icon_classify.png{{item.src}}"></image>
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+    </block>
+</template>

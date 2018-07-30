@@ -1,0 +1,78 @@
+.listaudio {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 30rpx;
+  /* background: greenyellow; */
+}
+
+.listaudio>view {
+  padding: 2%;
+  /* width: 98%; */
+  height: 200rpx;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* .listaudio>image {
+  width: 100%;
+  height: 200rpx;
+} */
+
+/* 头图 */
+
+.listaudio>view>image {
+  flex: 0 0 200rpx;
+  width: 200rpx;
+  height: 100%;
+}
+
+/* 中间文本描述 容器*/
+
+.listaudio>view>view:nth-child(2) {
+  position: relative;
+  flex: auto;
+  padding: 10rpx 20rpx 20rpx 20rpx;
+}
+
+.listaudio>view>view>view {
+  font-size: 32rpx;
+}
+
+.listaudio>view>view>view:nth-child(2) {
+  /* height: 32rpx; */
+  font-size: 30rpx;
+  color: #5e5e5e;
+  display: -webkit-box !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height:38rpx;
+}
+
+.listaudio>view>view>view:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  font-size: 26rpx;
+  color: #5e5e5e;
+}
+
+/* 右边功能按钮 容器*/
+
+.listaudio>view>view:nth-child(3) {
+  flex: 0 0 80rpx;
+  /* vertical-align: middle; */
+  padding-left: 20rpx;
+  align-items: center;
+  /* display: flex; */
+  display: none;
+}
+
+/* 右边功能按钮 图片*/
+
+.listaudio>view>view:nth-child(3)>image {
+  width: 40rpx;
+  height: 40rpx;
+}

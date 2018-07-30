@@ -1,7 +1,7 @@
 /**index.wxss**/
 @import "../../common/tpls/banner3/banner3.wxss";
-@import "../../common/tpls/list/list.wxss";
-
+@import "../../common/tpls/listaudio/listaudio.wxss";
+@import "../../common/tpls/itemblocklist/itemblocklist.wxss";
 navigator {
   display: initial;
 }
@@ -13,16 +13,18 @@ navigator {
 }
 
 .home_scroll .page__hd{
-  padding: 20rpx 40rpx 20rpx 40rpx;
+  padding: 50rpx 20rpx 5rpx 20rpx;
 }
 .home_scroll .page__hd .page__title{
-  text-align: center;
+  flex: 0 0 80%;
+  text-align: left;
   font-size: 30rpx
 }
+
 .home_scroll .page__hd .page__desc{
-  /* margin-top: 0; */
-  text-align: center;
-  font-size: 24rpx;
+  margin-top: 0;
+  flex: auto;
+  text-align: right;
 }
 .tab_bar {
   height: 60rpx;
@@ -81,29 +83,5 @@ navigator {
   height: 100%;
 }
 
-.recommended {
-  padding-top: 10rpx;
-  padding-bottom: 20rpx;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-around; /* Safari */
-  justify-content: space-around;
-  border-bottom: 1px solid #e0e0e0;
-}
 
-.recommended>view {
-  width: 33.3333%;
-  height: auto;
-  text-align: center;
-}
 
-.recommended>view>image {
-  width: 200rpx;
-  height: 200rpx;
-}
-
-.recommended>view>view {
-  width: 100%;
-  height: auto;
-  font-size: 24rpx;
-  /* text-align: center; */
-}

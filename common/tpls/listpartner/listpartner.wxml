@@ -1,0 +1,6 @@
+<import src="../itemblock/itemblock.wxml" />
+<template name="ListPartner">
+  <view class='itemblocklist weui-flex'>
+    <template is="ItemBlock" data="{{recommendeds}}" />
+  </view>
+</template>
