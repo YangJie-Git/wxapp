@@ -1,0 +1,27 @@
+<!--common/tpls/listvideo/listvideo.wxml-->
+<template name="ListVideo">
+  <view class='listvideo weui-flex'>
+    <block wx:for-items="{{lists}}" wx:key="{{index}}">
+      <view id="{{index}}" class='weui-flex' hover-class="navigator-hover">
+        <image class="weui-flex__item" mode="scaleToFill" src="../../images/def.jpg"></image>
+        <view class='weui-flex__item'>
+          <view>
+            {{listName}}{{item.name}}{{item.id}}
+          </view>
+          <view>
+            共5首
+          </view>
+
+        </view>
+        <view id="{{index}}" class='weui-flex__item' catchtap='shareClick'>
+          <image mode="scaleToFill" src="../../images/right.png"></image>
+        </view>
+      </view>
+      <block wx:if="{{listBannerNum && index == listBannerNum}}">
+        <image class="weui-flex__item" mode="scaleToFill" src="../../images/def.jpg"></image>
+      </block>
+    </block>
+
+    <button class="weui-btn" type="primary">下载APP 获取更多内容</button>
+  </view>
+</template>

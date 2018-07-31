@@ -1,6 +1,7 @@
 /**index.wxss**/
 @import "../../common/tpls/banner3/banner3.wxss";
 @import "../../common/tpls/list/list.wxss";
+@import "../../common/tpls/listvideo/listvideo.wxss";
 @import "../../common/tpls/itemblocklist2/itemblocklist.wxss";
 @import "../../common/tpls/listpartner/listpartner.wxss";
 navigator {

@@ -198,6 +198,14 @@ Page({
     };
     this.setData(data);
   },
+  playVideoSheet: function (e) {
+    wx.navigateTo({
+      url: '../videodetails/videodetails'
+    })
+  },
+  playVideo:function(e){
+
+  }
 })
 
 // Page({
