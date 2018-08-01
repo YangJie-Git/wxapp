@@ -1,1 +1,125 @@
-/* pages/audiodetails/audiodetails.wxss */
+@import "../../common/tpls/list/list.wxss";
+page{
+  height: 100%;
+  overflow: hidden;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.page-top {
+  height: 30%
+}
+
+.sheet-top {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* 头部歌单icon */
+.sheet-top__icon {
+  position: absolute;
+  left:50rpx;
+  bottom: 0;
+  width: 250rpx;
+  height: 250rpx;
+  display: inline-block;
+}
+
+.sheet-top__icon>span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f2f2f2;
+  font-size: 26rpx;
+  text-align: center;
+  border-radius: 10rpx 0rpx 10rpx 0rpx;
+}
+
+.sheet-top__icon>image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 217, 0, 0.089);
+  border-radius: 10rpx;
+}
+/* 头部右侧 */
+.sheet-top__right {
+  position: relative;
+  float: right;
+  margin-right: 20rpx;
+  width: 50%;
+  height: 100%;
+}
+
+.sheet-top__bg {
+  position: absolute;
+  width: 100%;
+  height: 250rpx;
+  background: rgb(201, 201, 201);
+}
+
+.sheet-top__title {
+  margin-top: 30rpx;
+  font-size: 34rpx;
+}
+
+.sheet-top__des {
+    margin-top: 10rpx;
+    font-size: 30rpx;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.sheet-top__play {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+}
+
+.page-center{
+  height: 60%;
+}
+.scroll-box {
+
+  width: 100%;
+  height: 100%;
+}
+
+.page-bottom {
+  width: 100%;
+  height: 9.8%;
+  /* flex:0 0 10%; */
+}
+
+/*上下曲 控制*/
+
+.songControl {
+  height: 100%;
+  width: 100%;
+  border-top: 1px gray solid;
+  display: flex; 
+  align-items:center;
+  justify-content: space-between;
+}
+.songLeft view{
+  padding-left: 10px;
+  font-size: 26rpx;
+}
+.songRight{
+
+}
+.songPrev, .songNext,.songPlay {
+  float: right;
+  margin-right: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+}

@@ -1,0 +1,31 @@
+@import "../../common/tpls/list/list.wxss";
+page{
+  height: 100%;
+  overflow: hidden;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+.page-top {
+  width: 100%;
+  height: 425rpx;
+}
+
+.scroll-box {
+  flex-grow: 1;
+  height: 500rpx;
+}
+
+.page-bottom {
+  width: 100%;
+  height: 50rpx;
+}

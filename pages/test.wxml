@@ -1,0 +1,8 @@
+<view class="container">
+  <!-- <view class='c2'> -->
+    <view class="top"></view>
+    <view class="center"></view>
+    <view class="bottom"></view>
+  <!-- </view> -->
+
+</view>

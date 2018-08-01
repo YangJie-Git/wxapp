@@ -1,5 +1,4 @@
-// pages/audiodetails/audiodetails.js
-
+// pages/videdetail/videdetail.js
 Page({
 
   /**
@@ -19,21 +18,36 @@ Page({
       data.lists.push(
         {
           id: i,
-          name: "歌曲",
-          time: "03:11"
+          name: "节目",
         }
       );
     }
     this.setData(data);
   },
 
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function (res) {
+    this.videoContext = wx.createVideoContext('myVideo');
   },
-
+  bindPlay: function () {
+    this.videoContext.play()
+  },
+  bindPause: function () {
+    this.videoContext.pause()
+  },
+  videoErrorCallback: function (e) {
+    console.log('视频错误信息:')
+    console.log(e.detail.errMsg)
+  },
+  goBack:function(){
+    wx.navigateBack();
+  },
+  goShare: function () {
+    wx.navigateBack();
+  },
   /**
    * 生命周期函数--监听页面显示
    */

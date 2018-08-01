@@ -1,11 +1,13 @@
 {
   "pages": [
+        "pages/audiodetails/audiodetails",
+        "pages/videdetails/videdetails",
+
     "pages/index/index",
     "pages/audio/audio",
-    "pages/logs/logs",
     "pages/history/history",
-    "pages/videdetail/videdetail",
-    "pages/audiodetails/audiodetails"
+
+    "pages/logs/logs"
   ],
   "window": {
     "navigationBarTextStyle": "black",

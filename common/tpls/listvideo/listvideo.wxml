@@ -2,7 +2,7 @@
 <template name="ListVideo">
   <view class='listvideo weui-flex'>
     <block wx:for-items="{{lists}}" wx:key="{{index}}">
-      <view id="{{index}}" class='weui-flex' hover-class="navigator-hover">
+      <view id="{{index}}" class='weui-flex' hover-class="navigator-hover" bindtap='goVideoDetails'>
         <image class="weui-flex__item" mode="scaleToFill" src="../../images/def.jpg"></image>
         <view class='weui-flex__item'>
           <view>

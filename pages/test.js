@@ -1,4 +1,4 @@
-// pages/videdetail/videdetail.js
+// pages/test.js
 Page({
 
   /**

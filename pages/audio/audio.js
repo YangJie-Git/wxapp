@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
+const app = getApp();
+const util = require('../../utils/util.js');
 Page({
   data: {
     activeIndex: 0,
@@ -202,4 +202,14 @@ Page({
     };
     this.setData(data);
   },
+  clickBlockItem: function (e) {
+    console.log("audio.js clickBlockItem", e);
+    util.goAudioDetails(1);
+  },
+  /**
+ * 用户点击右上角分享
+ */
+  onShareAppMessage: function () {
+
+  }
 })

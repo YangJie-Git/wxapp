@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const util = require('../../utils/util.js')
 
 Page({
   data: {
@@ -198,12 +199,17 @@ Page({
     };
     this.setData(data);
   },
-  playVideoSheet: function (e) {
-    wx.navigateTo({
-      url: '../videodetails/videodetails'
-    })
+  goVideoDetails: function (e) {
+    console.log("goVideoDetails",e);
+    util.goVideoDetails(1);
   },
   playVideo:function(e){
+
+  },
+  /**
+ * 用户点击右上角分享
+ */
+  onShareAppMessage: function () {
 
   }
 })

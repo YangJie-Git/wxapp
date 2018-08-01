@@ -1,2 +1,39 @@
-<!--pages/audiodetails/audiodetails.wxml-->
-<text>pages/audiodetails/audiodetails.wxml</text>
+<import src="../../common/tpls/list/list.wxml" />
+<view class="page weui-flex">
+  <view class="page-top weui-flex__item">
+    <view class="sheet-top">
+      <view class='sheet-top__bg'></view>
+      <view class='sheet-top__icon'>
+        <span>共101首</span>
+        <image mode="scaleToFill" src="../../images/def.jpg"></image>
+      </view>
+      <view class='sheet-top__right'>
+        <view class='sheet-top__title'>经典儿歌</view>
+        <view class='sheet-top__des font__black2'>
+          童年的乐曲是记忆深处最童年的乐曲是记忆深处最童年的乐曲是记忆深处最童年的乐曲是记忆深处最童年的乐曲是记忆深处最童年的乐曲是记忆深处最童年的乐曲是记忆深处最童年的乐曲是记忆深处最童年的乐曲是记忆深处最童年的乐曲是记忆深处最
+        </view>
+        <button class='sheet-top__play'>播放全部</button>
+      </view>
+    </view>
+  </view>
+  <view class='page-center weui-flex__item'>
+    <scroll-view class="scroll-box" scroll-y="true" upper-threshold="50" lower-threshold="100">
+      <!-- 视频列表 -->
+      <template is="List" data="{{lists, ...{listName:'',listBannerNum:'6'} }}" />
+    </scroll-view>
+  </view>
+  <view class='page-bottom weui-flex__item weui-flex'>
+    <!--上下播放暂停 控制-->
+    <view class="songControl">
+      <view class='songLeft'>
+        <view>小蛙跳</view>
+        <view>3:00/5:20</view>
+      </view>
+      <view class='songRight'>
+        <image class="songPlay" src="{{(playStatus || sliderValue>=99)?'../../images/pause.png':'../../images/play.png'}}" bindtap="bindPlaySong"></image>
+        <image class="songPrev" src="../../images/prev.png" bindtap="bindPrevSong"></image>
+        <image class="songNext" src="../../images/next.png" bindtap="bindNextSong"></image>
+      </view>
+    </view>
+  </view>
+</view>

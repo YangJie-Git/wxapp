@@ -2,7 +2,7 @@
 <template name="List">
   <view class='list weui-flex'>
     <block wx:for-items="{{lists}}" wx:key="{{index}}">
-      <view id="{{index}}" class='weui-flex' hover-class="navigator-hover">
+      <view id="{{index}}" class='weui-flex' hover-class="navigator-hover" bindtap='goVideoDetails'>
         <image class="weui-flex__item" mode="scaleToFill" src="../../images/def.jpg"></image>
         <view class='weui-flex__item'>{{listName}}{{item.name}}{{item.id}}</view>
         <view id="{{index}}" class='weui-flex__item' catchtap='shareClick'>
@@ -14,6 +14,6 @@
       </block>
     </block>
 
-    <button class="weui-btn" type="primary">下载APP 获取更多内容</button>
+    <!-- <button class="weui-btn" type="primary">下载APP 获取更多内容</button> -->
   </view>
 </template>
